@@ -10,6 +10,15 @@ function loadData() {
 
 
     // load nytimes
+    var nytimesUrl = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + city + '&sort=newest&api-key=3abc9a3d23e60b38c21b4ab9b0a91c07:17:69911633'
+    $.getJSON(nytimesUrl, function(data){
+        articles = data.response.docs;
+        for (var i = 0; i < articles.length; i++) {
+            var article = articles[i];
+            $('#nytimes').append('<li><a href='+article.web_url+'>'+article.headline.main+'</a></li>')
+        };
+    });
+
 
 
     // load wikipedia data
