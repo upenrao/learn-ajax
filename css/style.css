@@ -1,5 +1,5 @@
 * {box-sizing:border-box;}
-body {background-color: black;}
+body {background-color: #CCC;}
 
 .bgimg {
     position:fixed;
@@ -8,6 +8,12 @@ body {background-color: black;}
     width:100%;
     z-index:-1;
     opacity:1;
+}
+
+.greeting {
+    color:black;
+    text-shadow: 1px 1px 3px rgba(255,255,255, .5);
+    text-align: center;
 }
 
 .wikipedia-container {
