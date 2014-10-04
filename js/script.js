@@ -1,10 +1,15 @@
 
 function loadData() {
+
     var $body = $('body');
     var $wikiElem = $('#wikipedia-links');
     var $nytHeaderElem = $('#nytimes-header');
     var $nytElem = $('#nytimes-articles');
     var $greeting = $('#greeting');
+
+    // clear out old data before new request
+    if ($wikiElem.children().length > 0) $wikiElem.text("");
+    if ($nytElem.children().length > 0) $wikiElem.text("");
 
     var streetStr = $('#street').val();
     var cityStr = $('#city').val();
@@ -26,7 +31,6 @@ function loadData() {
         articles = data.response.docs;
         for (var i = 0; i < articles.length; i++) {
             var article = articles[i];
-            console.log(article);
             $nytElem.append('<li class="article">'+
                 '<a href="'+article.web_url+'">'+article.headline.main+'</a>'+
                 '<p>' + article.snippet + '</p>'+
@@ -71,4 +75,4 @@ function loadData() {
 
 $('#submit-btn').click(loadData);
 
-loadData();
+// loadData();
