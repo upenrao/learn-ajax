@@ -1,6 +1,10 @@
 * {box-sizing:border-box;}
 body {background-color: #CCC;}
 
+#form-container{
+    text-align: center;
+}
+
 .bgimg {
     position:fixed;
     top: 0;
@@ -18,7 +22,7 @@ body {background-color: #CCC;}
 
 .wikipedia-container {
     float:right;
-    width:290px;
+    width:40%;
     padding:10px;
     margin-right: 10px;
     background-color: rgba(255,255,255,0.7);
@@ -26,6 +30,7 @@ body {background-color: #CCC;}
 
 .nytimes-container {
     padding: 10px;
+    width:50%;
     margin-right:300px;
     background-color: rgba(255,255,255,0.7);
 }
